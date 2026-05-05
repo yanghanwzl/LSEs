@@ -135,8 +135,8 @@ K_u = K_u/2;
     K_v = K1/2 + M/(tau) + M/2;
     F_v = F_v + M*(v(q,:).'/(tau)) + FF_v - K1*v(q,:).'/2 - M*v(q,:).'/2;
 
-    [K,F] = bon(K,F,NE,Pb,tc,BC,nu_x,mu_x,nu_y,mu_y,q);
-    [K_v,F_v] = bon(K_v,F_v,NE,Pb,tc,BC,nu_v_x,mu_v_x,nu_v_y,mu_v_y,q);
+    [K,F] = bou(K,F,NE,Pb,tc,BC,nu_x,mu_x,nu_y,mu_y,q);
+    [K_v,F_v] = bou(K_v,F_v,NE,Pb,tc,BC,nu_v_x,mu_v_x,nu_v_y,mu_v_y,q);
 
     w(q+1,:) = K\F;
     v(q+1,:) = K_v\F_v;
