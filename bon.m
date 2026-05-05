@@ -1,4 +1,4 @@
-function [K,F] = bon(K,F,NE,Pb,tc,BC,nu_x,mu_x,nu_y,mu_y,q)
+function [K,F] = bou(K,F,NE,Pb,tc,BC,nu_x,mu_x,nu_y,mu_y,q)
 for i = 1:length(BC)
     if BC(1,i)==-1
         k = BC(3,i);
